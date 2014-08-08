@@ -13,9 +13,5 @@
         "psr-0": {
             "Neuralys\\Nde": "src/"
         }
-    },
-    
-    "config": {
-        "bin-dir": "."
-    }
+    }    
 }
