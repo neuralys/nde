@@ -1,0 +1,912 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "fd0b12d15f5cf8007d6ce262b487bc39",
+    "packages": [
+
+    ],
+    "packages-dev": [
+        {
+            "name": "monolog/monolog",
+            "version": "1.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/monolog-monolog-65026b610f8c19e61d7242f600530677b0466aac-zip-10737c.zip",
+                "reference": "65026b610f8c19e61d7242f600530677b0466aac",
+                "shasum": "db1b8cc3e7d259a260aa1ca518d6a4a3fbd60628"
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "phpunit/phpunit": "~3.7.0",
+                "raven/raven": "~0.5",
+                "ruflin/elastica": "0.90.*"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2014-04-24 13:29:03"
+        },
+        {
+            "name": "neuralys/phing",
+            "version": "v1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "svn://porcinet/nico/Mes Projets/php/phing",
+                "reference": "/tags/v1.2.1/@2051"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/satis/dist/neuralys-phing-v1.2.1-ce2455.zip",
+                "reference": "/tags/v1.2.1/@2051",
+                "shasum": "bdd27db46efd77a0ae284947d6753524cbf8e816"
+            },
+            "require": {
+                "phing/phing": "2.4.14"
+            },
+            "require-dev": {
+                "doctrine/annotations": "1.1.1",
+                "neuralys/markdown": "1.*",
+                "neuralys/phpcs-neuralys": "1.0",
+                "neuralys/sonar": "1.0.0",
+                "neuralys/sonar-runner": "1.4.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "needed for annotation parser, v1.1.1",
+                "neuralys/jslint": "v1 or higher needed for JS Lint Task",
+                "neuralys/markdown": "v1 or higher needed for Markdownize Task",
+                "neuralys/phing-dist-module": "if you need dist creation / cleaning",
+                "neuralys/phing-distfiles-module": "if your dist should be historized in SVN on run target",
+                "neuralys/phing-doc-module": "add doc generation on rebuild target",
+                "neuralys/phing-lint-module": "add lint folder parsing to rebuild target",
+                "neuralys/phing-phar-module": "add phar generation. box.json file needed !",
+                "neuralys/phing-source-module": "add source folder features (lint...)",
+                "neuralys/phing-tests-module": "add tests folder features (lint...)",
+                "neuralys/rhino": "v1.7 or higher needed for JS Lint Task"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Neuralys\\Phing": "src/"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "Neuralys\\Phing\\Commands::installInternal"
+                ],
+                "post-update-cmd": [
+                    "Neuralys\\Phing\\Commands::installInternal"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "Phing tasks & tagged build file",
+            "time": "2014-07-02 18:10:37"
+        },
+        {
+            "name": "neuralys/phpcs-neuralys",
+            "version": "v1.0.0",
+            "source": {
+                "type": "svn",
+                "url": "svn://porcinet/nico/Mes Projets/php/phpcs-neuralys",
+                "reference": "/tags/v1.0.0/@1382"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/satis/dist/neuralys-phpcs-neuralys-v1.0.0-989b95.zip",
+                "reference": "/tags/v1.0.0/@1382",
+                "shasum": "6f7f82e8dc55f6f285e9b0dc00d6ab9416159169"
+            },
+            "require": {
+                "neuralys/phpcs-symfony2": "1.0.0"
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "NeuralyS Coding Standards for PHPCS",
+            "time": "2013-05-29 19:19:38"
+        },
+        {
+            "name": "neuralys/phpcs-symfony2",
+            "version": "v1.0.0",
+            "source": {
+                "type": "svn",
+                "url": "svn://porcinet/nico/Mes Projets/php/phpcs-symfony2",
+                "reference": "/tags/v1.0.0/@1376"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/satis/dist/neuralys-phpcs-symfony2-v1.0.0-3663e8.zip",
+                "reference": "/tags/v1.0.0/@1376",
+                "shasum": "002a45cc72649a0a06c0ca858e6f3d9fcff1214a"
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "Symfony2 Coding Standards for PHPCS",
+            "time": "2013-05-29 19:02:03"
+        },
+        {
+            "name": "neuralys/phpstorm-neuralys",
+            "version": "v5.3.1",
+            "source": {
+                "type": "svn",
+                "url": "svn://porcinet/nico/Mes Projets/php/phpstorm-neuralys",
+                "reference": "/tags/v5.3.1/@1519"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/satis/dist/neuralys-phpstorm-neuralys-v5.3.1-9e8bfc.zip",
+                "reference": "/tags/v5.3.1/@1519",
+                "shasum": "cefbcd326e30b78d18bef5b9294d0e706e5ec806"
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "NeuralyS Coding Standards for PHPSTORM",
+            "time": "2013-07-25 13:23:27"
+        },
+        {
+            "name": "neuralys/sonar",
+            "version": "v1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "svn://porcinet/nico/Mes Projets/php/sonar",
+                "reference": "/tags/v1.0.1/@2052"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/satis/dist/neuralys-sonar-v1.0.1-52477d.zip",
+                "reference": "/tags/v1.0.1/@2052",
+                "shasum": "a8b1c98a3bf16b54d25a8da40bea98795f6dac82"
+            },
+            "require": {
+                "pdepend/pdepend": "1.1.0",
+                "phpmd/phpmd": "1.4.1",
+                "phpunit/phpunit": "3.7.21",
+                "squizlabs/php_codesniffer": "1.4.5"
+            },
+            "type": "library",
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "Sonar meta package dependencies",
+            "time": "2014-07-02 18:11:03"
+        },
+        {
+            "name": "neuralys/sonar-runner",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neuralys/sonar-runner.git",
+                "reference": "4910e362bc313fba3301cf7a1664cefd0a11d986"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/neuralys-sonar-runner-4910e362bc313fba3301cf7a1664cefd0a11d986-zip-aba7bb.zip",
+                "reference": "4910e362bc313fba3301cf7a1664cefd0a11d986",
+                "shasum": "d96a32bf0bec0088c825a5bd8bb876b14f6f37e5"
+            },
+            "type": "library",
+            "notification-url": "http://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Nicolas BELIN",
+                    "email": "nico@neuralys.com"
+                }
+            ],
+            "description": "Sonar Runner binaries to work with Packagist",
+            "time": "2013-06-05 08:52:57"
+        },
+        {
+            "name": "pdepend/pdepend",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdepend/pdepend.git",
+                "reference": "fbeaa10ee57114d790be5fb6778dcf0404267fef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/pdepend-pdepend-fbeaa10ee57114d790be5fb6778dcf0404267fef-zip-86873f.zip",
+                "reference": "fbeaa10ee57114d790be5fb6778dcf0404267fef",
+                "shasum": "3a25194d8f7da4379219ffb38de205fa15eaa707"
+            },
+            "require": {
+                "php": ">=5.2.3"
+            },
+            "bin": [
+                "src/bin/pdepend"
+            ],
+            "type": "library",
+            "notification-url": "http://packagist.org/downloads/",
+            "description": "Official version of pdepend to be handled with Composer",
+            "time": "2012-09-12 11:09:19"
+        },
+        {
+            "name": "phing/phing",
+            "version": "2.4.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phingofficial/phing.git",
+                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phing-phing-41075d93ca254f1c90c79ec7ce81be2b2629e138-zip-f6a637.zip",
+                "reference": "41075d93ca254f1c90c79ec7ce81be2b2629e138",
+                "shasum": "e204eaf240c6ae53eee3c211670da18b082af476"
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "bin": [
+                "bin/phing"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/phing/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                "classes"
+            ],
+            "license": [
+                "LGPL3"
+            ],
+            "authors": [
+                {
+                    "name": "Michiel Rook",
+                    "email": "mrook@php.net"
+                },
+                {
+                    "name": "Phing Community",
+                    "homepage": "http://www.phing.info/trac/wiki/Development/Contributors"
+                }
+            ],
+            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
+            "homepage": "http://www.phing.info/",
+            "keywords": [
+                "build",
+                "task",
+                "tool"
+            ],
+            "time": "2012-11-29 21:23:47"
+        },
+        {
+            "name": "phpmd/phpmd",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmd/phpmd.git",
+                "reference": "7d03a50e937811970751697ad1aea33a1089d66f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpmd-phpmd-7d03a50e937811970751697ad1aea33a1089d66f-zip-91ceb6.zip",
+                "reference": "7d03a50e937811970751697ad1aea33a1089d66f",
+                "shasum": "08b11966fcda6b317b59c7f3e5540991b4700d0a"
+            },
+            "require": {
+                "pdepend/pdepend": "*",
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "src/bin/phpmd"
+            ],
+            "type": "library",
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                "../../pdepend/pdepend/src/main/php",
+                "src/main/php"
+            ],
+            "description": "Official version of PHPMD handled with Composer.",
+            "time": "2012-12-14 12:25:09"
+        },
+        {
+            "name": "phpunit/php-code-coverage",
+            "version": "1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-php-code-coverage-6ef2bf3a1c47eca07ea95f0d8a902a6340390b34-zip-13da80.zip",
+                "reference": "6ef2bf3a1c47eca07ea95f0d8a902a6340390b34",
+                "shasum": "64e2d866aae798742f9c05129bb9872bd8fb32d5"
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-file-iterator": ">=1.3.0@stable",
+                "phpunit/php-text-template": ">=1.2.0@stable",
+                "phpunit/php-token-stream": ">=1.1.3@stable"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@dev"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-xdebug": ">=2.0.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
+            "keywords": [
+                "coverage",
+                "testing",
+                "xunit"
+            ],
+            "time": "2014-03-28 10:53:45"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-php-file-iterator-acd690379117b042d1c8af1fafd61bde001bf6bb-zip-831201.zip",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "shasum": "669826edef2e2d4b94ec4fcbad28952c7d9c190d"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "File/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2013-10-10 15:34:57"
+        },
+        {
+            "name": "phpunit/php-text-template",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-php-text-template-206dfefc0ffe9cebf65c413e3d0e809c82fbf00a-zip-dce9d3.zip",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "shasum": "d1de6ca5d793248e09b0684085f5141e1525957b"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Text/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Simple template engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "keywords": [
+                "template"
+            ],
+            "time": "2014-01-30 17:20:04"
+        },
+        {
+            "name": "phpunit/php-timer",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-timer.git",
+                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-php-timer-19689d4354b295ee3d8c54b4f42c3efb69cbc17c-zip-04e2aa.zip",
+                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "shasum": "75eef0198d044cdfd64b55b00f13fac007c48940"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Utility class for timing",
+            "homepage": "https://github.com/sebastianbergmann/php-timer/",
+            "keywords": [
+                "timer"
+            ],
+            "time": "2013-08-02 07:42:54"
+        },
+        {
+            "name": "phpunit/php-token-stream",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-php-token-stream-ad4e1e23ae01b483c16f600ff1bebec184588e32-zip-b28aa4.zip",
+                "reference": "ad4e1e23ae01b483c16f600ff1bebec184588e32",
+                "shasum": "7d5370765a8d07310d7f5c48056025e91e4c29f5"
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Wrapper around PHP's tokenizer extension.",
+            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2014-03-03 05:10:30"
+        },
+        {
+            "name": "phpunit/phpunit",
+            "version": "3.7.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "03d1a18ce69ac820bcd83cc7bac0c5884715b777"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-phpunit-03d1a18ce69ac820bcd83cc7bac0c5884715b777-zip-07e600.zip",
+                "reference": "03d1a18ce69ac820bcd83cc7bac0c5884715b777",
+                "shasum": "6110c552af09c299b746f5153b5452f192bfbbb1"
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-pcre": "*",
+                "ext-reflection": "*",
+                "ext-spl": "*",
+                "php": ">=5.3.3",
+                "phpunit/php-code-coverage": ">=1.2.1,<1.3.0",
+                "phpunit/php-file-iterator": ">=1.3.1",
+                "phpunit/php-text-template": ">=1.1.1",
+                "phpunit/php-timer": ">=1.0.2,<1.1.0",
+                "phpunit/phpunit-mock-objects": ">=1.2.0,<1.3.0",
+                "symfony/yaml": "~2.0"
+            },
+            "require-dev": {
+                "pear-pear/pear": "1.9.4"
+            },
+            "suggest": {
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "phpunit/php-invoker": ">=1.1.0,<1.2.0"
+            },
+            "bin": [
+                "composer/bin/phpunit"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.7.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHPUnit/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                "",
+                "../../symfony/yaml/"
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "The PHP Unit Testing framework.",
+            "homepage": "http://www.phpunit.de/",
+            "keywords": [
+                "phpunit",
+                "testing",
+                "xunit"
+            ],
+            "time": "2013-05-23 18:54:29"
+        },
+        {
+            "name": "phpunit/phpunit-mock-objects",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/phpunit-phpunit-mock-objects-5794e3c5c5ba0fb037b11d8151add2a07fa82875-zip-eb5a47.zip",
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875",
+                "shasum": "581ad2f6acabc8b08634d08a9be7b665d923fa75"
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-text-template": ">=1.1.1@stable"
+            },
+            "suggest": {
+                "ext-soap": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "PHPUnit/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Mock Object library for PHPUnit",
+            "homepage": "https://github.com/sebastianbergmann/phpunit-mock-objects/",
+            "keywords": [
+                "mock",
+                "xunit"
+            ],
+            "time": "2013-01-13 10:24:48"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/psr-log-fe0936ee26643249e916849d48e3a51d5f5e278b-zip-e71523.zip",
+                "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+                "shasum": "0b05a6edcd929ed9b9603a19cd49406ffbeab43c"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Psr\\Log\\": ""
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "1.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "44f01e18f7b7d5b4301fd86dd1762a23fc3ccd06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/squizlabs-php_codesniffer-44f01e18f7b7d5b4301fd86dd1762a23fc3ccd06-zip-348022.zip",
+                "reference": "44f01e18f7b7d5b4301fd86dd1762a23fc3ccd06",
+                "shasum": "81b3dcc20b3160a6b1d6a47e1befea0e6550efa8"
+            },
+            "require": {
+                "php": ">=5.1.2"
+            },
+            "bin": [
+                "scripts/phpcs"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/MultiFileSniff.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/CommentParser/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenises PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2013-04-03 23:16:28"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.4.5",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "fd22bb88c3a6f73c898b39bec185a9e211b06265"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://svn.neuralys.net/packagist/dist/symfony-yaml-fd22bb88c3a6f73c898b39bec185a9e211b06265-zip-8e51ea.zip",
+                "reference": "fd22bb88c3a6f73c898b39bec185a9e211b06265",
+                "shasum": "e21c45a1811a491d21743833d1e43a9d09f51387"
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "http://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-05-12 09:27:48"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

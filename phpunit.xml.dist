@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" bootstrap="tests/bootstrap.php">
+    <php>
+        <env name="APP_ENV" value="test"/>
+    </php>
+    <testsuites>
+        <testsuite name="nde">
+            <directory suffix="Test.php">tests/*</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="false">
+            <directory>src</directory>
+            <exclude>
+                <directory suffix="php">path_to_exclude</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

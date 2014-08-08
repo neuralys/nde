@@ -1,0 +1,50 @@
+{
+    "name": "neuralys/nde",
+    "description": "Library for the Winamp Nullsoft Database Engine format aka NDE",
+
+    "repositories": [
+        { "type": "composer", "url": "http://svn.neuralys.net/satis" },
+        { "type": "composer", "url": "http://svn.neuralys.net/packagist" },
+        { "packagist": false }
+    ],
+
+    "authors": [
+        {
+            "name": "Nicolas BELIN",
+            "email": "nico@neuralys.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {
+            "Neuralys\\Nde": "src/"
+        }
+    },
+    
+    "config": {
+        "bin-dir": "."
+    },    
+    
+    "require-dev": {
+        "monolog/monolog": "~1",
+
+        "neuralys/phing": "~1",
+        "neuralys/phpcs-neuralys": "~1",
+        "neuralys/phpstorm-neuralys": "5.3.*",
+        "neuralys/sonar": "~1",
+        "neuralys/sonar-runner": "1.4.0"
+    },
+
+    "scripts": {
+
+        "post-install-cmd": [
+            "Neuralys\\Phing\\Commands::installBuild",
+            "Neuralys\\Phing\\Commands::installAssets"
+        ],
+
+        "post-update-cmd": [
+            "Neuralys\\Phing\\Commands::installBuild",
+            "Neuralys\\Phing\\Commands::installAssets"
+        ]
+    }
+}
